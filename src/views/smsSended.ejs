@@ -1,0 +1,21 @@
+<% include partials/_header %>
+<div class="container">
+<!-- LIST -->
+  <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th><center>messages</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < messages.length; i++) { %>
+            <tr>
+              <td><center><%= messages[i] %></center></td>
+            </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <a  href="/"> Back to menu </a>
+  </div>
+</div>

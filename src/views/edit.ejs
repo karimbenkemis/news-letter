@@ -1,0 +1,33 @@
+<% include partials/_header %>
+
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/edit/<%= contact._id %>" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="name" placeholder="Name" value="<%= contact.name %>">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="Your Contact Email" value="<%= contact.email %>">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="phone_number" placeholder="Phone number" value="<%= contact.phone_number %>">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="shouldAddToNewsletter" value="true" <%= contact.shouldAddToNewsletter ? "checked" : "" %>>
+              <label class="form-check-label" for="shouldAddToNewsletter">Add it to my news letter?</label>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Update 
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer%>
